@@ -8,5 +8,12 @@
   "repository": "https://github.com/mada-nemui/njk-html.git",
   "author": "mada-nemui",
   "license": "ISC",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "chokidar": "^1.6.1",
+    "commander": "^2.13.0",
+    "glob": "^7.1.1",
+    "mkdirp": "^0.5.1",
+    "nunjucks": "^3.0.0"
+  }
 }
