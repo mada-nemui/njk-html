@@ -5,6 +5,13 @@
   "repository": "https://github.com/mada-nemui/njk-html.git",
   "author": "mada-nemui",
   "license": "ISC",
+  "keywords": [
+    "nunjucks",
+    "html",
+    "compile",
+    "watch",
+    "templates"
+  ],
   "private": true,
   "dependencies": {
     "chokidar": "^1.6.1",
