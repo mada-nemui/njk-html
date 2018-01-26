@@ -1,2 +1,3 @@
 # njk-cli
-Nunjucksテンプレートを静的HTMLファイルにコンパイルする為のCLIラッパー
+Nunjucksテンプレートを静的HTMLファイルにコンパイルする為のNodeモジュールです。
+
