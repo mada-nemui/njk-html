@@ -7,6 +7,7 @@
   "license": "ISC",
   "keywords": [
     "nunjucks",
+    "static",
     "html",
     "compile",
     "watch",
