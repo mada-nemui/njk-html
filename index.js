@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var fs = require("fs");
 var mkdirp = require('mkdirp')
 var nunjucks = require('nunjucks');
