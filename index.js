@@ -49,7 +49,7 @@ if (argv.out) options.out = argv.out;
 if (argv.usecache) options.envOptions.noCache = !argv.usecache;
 if (argv.watch) options.envOptions.watch = argv.watch;
 
-console.log('----\n' + colors.yellow + 'njk-html:' + colors.reset);
+console.log('----\nnjk-html:');
 if (!options.envOptions.noCache) console.log(colors.magenta + '  [!]' + colors.reset + ' Use Cache');
 // console.log(' path ' + options.path);
 // console.log(' out ' + options.out);
@@ -66,7 +66,7 @@ var compile = new nunjucks.Environment(options.loaders, options.envOptions);
 
 if (argv.watch) {
   var watcher = chokidar.watch(['**/*.html'], options.chokidar);
-  watcher.on('ready', function() { console.log(colors.cyan + "  start watching..." + colors.reset); }).on('change', function (file) {
+  watcher.on('ready', function() { console.log(colors.cyan + "start watching..." + colors.reset); }).on('change', function (file) {
     if (file.indexOf('_') > -1) {
       complieAll();
     } else {
