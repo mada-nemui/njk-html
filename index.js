@@ -6,10 +6,10 @@ var glob = require("glob");
 var path = require('path');
 var chokidar = require('chokidar');
 var argv = require("commander")
-  .option("-p, --path <s>", "Path where template live")
-  .option("-o, --out <s>", "Output folder")
-  .option("-c, --usecache", "'noCache' set FALSE.")
-  .option("-w, --watch", "Watch files change.")
+  .option("-p, --path <s>", "Nujucksファイルのパス")
+  .option("-o, --out <s>", "出力先ディレクトリのパス")
+  .option("-c, --use-cache", "'noCache'オプションにFALSEをセット")
+  .option("-w, --watch", "ファイルを監視して自動コンパイル")
   .parse(process.argv);
 var options = {
   path: './',
@@ -75,7 +75,7 @@ if (argv.watch) {
       var outputFile = path.resolve(path.basename(options.out), file);
       mkdirp.sync(path.dirname(outputFile));
       fs.writeFile(outputFile, fileContent, function(err){
-        console.log(logCompileColor() + '  compile ' + colors.reset + file);
+        console.log(logCompileColor() + 'compile ' + colors.reset + file);
         if(err){
           console.log(err);
         }
@@ -99,7 +99,7 @@ function complieAll() {
       var outputFile = path.resolve(path.basename(options.out), file);
       mkdirp.sync(path.dirname(outputFile));
       fs.writeFile(outputFile, fileContent, function(err){
-        console.log(_logCompileColor + '  compile ' + colors.reset + file);
+        console.log(_logCompileColor + 'compile ' + colors.reset + file);
         if(err){
           console.log(err);
         }
