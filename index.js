@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 var fs = require("fs");
-var mkdirp = require('mkdirp')
+var mkdirp = require('mkdirp');
 var nunjucks = require('nunjucks');
 var glob = require("glob");
 var path = require('path');
@@ -33,7 +33,7 @@ var colors = {
   cyan: '\u001b[36m',
   white: '\u001b[37m',
   reset: '\u001b[0m'
-}
+};
 var colorChange = false;
 var logCompileColor = function() {
   colorChange = !colorChange;
@@ -42,7 +42,7 @@ var logCompileColor = function() {
   } else {
     return colors.blue;
   }
-}
+};
 
 if (argv.path) options.path = argv.path;
 if (argv.out) options.out = argv.out;
